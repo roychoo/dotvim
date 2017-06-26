@@ -375,13 +375,22 @@ function! <SID>BufcloseCloseIt()
 endfunction
 
 " Plugins
-call plug#begin('~/.vim/plugged')
+ if has("nvim")
+  call plug#begin('~/.local/share/nvim/plugged')
+else
+   call plug#begin('~/.vim/plugged')
+endif
+
 
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes' 
+Plug 'ervandew/supertab'
+Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -393,3 +402,12 @@ let g:airline#extensions#tabline#enabled = 1
 
 nmap <C-e> :NERDTreeToggle<cr>
 set number
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<cr>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
