@@ -394,13 +394,14 @@ Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'kien/ctrlp.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
-let g:ale_open_list = 1
 let g:airline#extensions#tabline#enabled = 1
 
 nmap <C-e> :NERDTreeToggle<cr>
@@ -416,3 +417,5 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:NERDSpaceDelims=1
+let NERDTreeShowHidden=1
