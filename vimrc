@@ -396,6 +396,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
