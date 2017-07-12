@@ -397,13 +397,14 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'flazz/vim-colorschemes'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
-let g:airline#extensions#tabline#enabled = 1
 
 nmap <C-e> :NERDTreeToggle<cr>
 set number
@@ -417,6 +418,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:NERDSpaceDelims=1
 let NERDTreeShowHidden=1
+colorscheme OceanicNext
+let g:airline_theme='base16'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled = 1
