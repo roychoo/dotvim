@@ -401,6 +401,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'nazo/pt.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -426,3 +428,7 @@ colorscheme OceanicNext
 let g:airline_theme='base16'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" https://github.com/christoomey/vim-tmux-navigator/issues/83
+let g:NERDTreeMapJumpNextSibling = '<Nop>'
+let g:NERDTreeMapJumpPrevSibling = '<Nop>'
