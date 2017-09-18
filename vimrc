@@ -403,6 +403,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'nazo/pt.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'heavenshell/vim-jsdoc'
 
 call plug#end()
 
