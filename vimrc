@@ -432,3 +432,5 @@ let g:airline#extensions#tabline#enabled = 1
 " https://github.com/christoomey/vim-tmux-navigator/issues/83
 let g:NERDTreeMapJumpNextSibling = '<Nop>'
 let g:NERDTreeMapJumpPrevSibling = '<Nop>'
+set completeopt-=preview
+:imap fd <Esc>
